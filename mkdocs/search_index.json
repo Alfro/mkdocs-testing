@@ -1,24 +1,49 @@
 {
     "docs": [
         {
-            "location": "/",
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
-            "title": "Home"
+            "location": "/HardwareRecommendations/",
+            "text": "Hardware recommendations\n\n\nThis document is updated to the 2.0.0 release\n\n\nBase unit\n\n\nGalicaster units are assembled with standard computer components and compatible capture devices and cards. For a good experience with Galicaster, we recommend a series of reference units, all of them sharing the common components indicated in this base unit.\n\n\nThree different references are proposed: an \nentry level\n unit (using a HD webcam), a \nSD based unit\n and a \nHD based unit\n. Other combinations are possible that may fit your needs better. For instructions on how to assemble or purchase a unit, contact us through our multiple \ncommunication channels\n\n\nCPU and RAM requirements\n\n\nThe capture devices used with Galicaster demand a high bandwith capacity and disk writing rate, so a powerful CPU is needed. Depending on the chosen hardware, the following statements will suffice:\n\n\n\n\nAn Intel i3 cpu, minimum.\n\n\n64 bits architecture.\n\n\n4 GB of RAM memory.\n\n\n\n\n\n\nThe selected hardware must be compatible with your Linux distribution of choice. Our recommendation is using Ubuntu 16.04, since Galicaster is developed and extensively tested in this distribution. Nonetheless, other distributions may work with Galicaster, however some additional testing is advisable.\n\n\n\n\nTouchscreen\n\n\nGalicaster's Graphical Interface is designed in an user-friendly, easy-to-use, big-sized style, making it suitable for tactile devices, specially high resolution touchscreens. However, there is nothing against using it with a classic mouse and keyboard interface.\n\n\n\n\nReference units\n\n\nThis section provides some examples of reference units, so that the interested readers can have a reference to begin with. Several combinations can be implemented, even multiple ones on the same unit. Some parameters should be taken into account when making the decision, such as:\n\n\n* Pre-existing equipment: cameras, microphones, computers.\n* Recording scenario: lectures, conferences, studio, video-conference.\n* Complementary Hardware: scalers, splitters, audio mixers ...\n* Cost.\n* Publication channels.\n\n\n\n\n\nEntry level unit - HD webcam based\n\n\n\n\n\n\n\n\n\n\nComponent\n\n\nDevice\n\n\nFormat\n\n\nObservations\n\n\n\n\n\n\n\n\n\n\nBase unit\n\n\nIntel i3 processor 4 GB RAM\n\n\n\n\n\n\n\n\n\n\nCamera\n\n\nLogitech c920\n\n\n720p or 1080p\n\n\n\n\n\n\n\n\nVGA capture card\n\n\nDatapath VisionRBG 1es\n\n\n24bit 1920x1080 x 32bit at 60Hz\n\n\nAccepts DVI single link and VGA\n\n\n\n\n\n\n\n\nSD camera and DVI framegrabber\n\n\n\n\n\n\n\n\n\n\nComponent\n\n\nDevice\n\n\nFormat\n\n\nObservations\n\n\n\n\n\n\n\n\n\n\nBase unit\n\n\nIntel i3 processor 4 GB RAM\n\n\n\n\n\n\n\n\n\n\nVideo capture card\n\n\nBlackmagic Intensity Pro\n\n\n720p, 1080p, 1080i\n\n\nSound embedded or analog\n\n\n\n\n\n\nDVI capture card\n\n\nDatapath VisionRBG 1es\n\n\n24bit 1920x1080 x 32bit at 60Hz\n\n\nAccepts DVI single link and VGA\n\n\n\n\n\n\n\n\nHD configuration unit\n\n\n\n\n\n\n\n\n\n\nComponent\n\n\nDevice\n\n\nFormat\n\n\nObservations\n\n\n\n\n\n\n\n\n\n\nBase unit\n\n\nIntel i7 processor 4GB RAM\n\n\n\n\n\n\n\n\n\n\nVideo capture card\n\n\nBlackmagic Decklink SDI\nBlackmagic Intensity Pro\n\n\n720p, 1080p, 1080i\n\n\nSound embedded or analog\n\n\n\n\n\n\nDVI capture card\n\n\nDatapath VisionRBG 1es\n\n\n24bit 1920x1080 x 32bit at 60Hz\n\n\n\n\n\n\n\n\n\n\nNOTE: Audio can be captured from outside the video capture cards. Multiple audio sources can be recorded at once, but additional processing may be needed afterwards for a proper playback.",
+            "title": "Hardware Recommendations"
         },
         {
-            "location": "/#welcome-to-mkdocs",
-            "text": "For full documentation visit  mkdocs.org .",
-            "title": "Welcome to MkDocs"
+            "location": "/HardwareRecommendations/#hardware-recommendations",
+            "text": "This document is updated to the 2.0.0 release",
+            "title": "Hardware recommendations"
         },
         {
-            "location": "/#commands",
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
-            "title": "Commands"
+            "location": "/HardwareRecommendations/#base-unit",
+            "text": "Galicaster units are assembled with standard computer components and compatible capture devices and cards. For a good experience with Galicaster, we recommend a series of reference units, all of them sharing the common components indicated in this base unit.  Three different references are proposed: an  entry level  unit (using a HD webcam), a  SD based unit  and a  HD based unit . Other combinations are possible that may fit your needs better. For instructions on how to assemble or purchase a unit, contact us through our multiple  communication channels",
+            "title": "Base unit"
         },
         {
-            "location": "/#project-layout",
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
-            "title": "Project layout"
+            "location": "/HardwareRecommendations/#cpu-and-ram-requirements",
+            "text": "The capture devices used with Galicaster demand a high bandwith capacity and disk writing rate, so a powerful CPU is needed. Depending on the chosen hardware, the following statements will suffice:   An Intel i3 cpu, minimum.  64 bits architecture.  4 GB of RAM memory.    The selected hardware must be compatible with your Linux distribution of choice. Our recommendation is using Ubuntu 16.04, since Galicaster is developed and extensively tested in this distribution. Nonetheless, other distributions may work with Galicaster, however some additional testing is advisable.",
+            "title": "CPU and RAM requirements"
+        },
+        {
+            "location": "/HardwareRecommendations/#touchscreen",
+            "text": "Galicaster's Graphical Interface is designed in an user-friendly, easy-to-use, big-sized style, making it suitable for tactile devices, specially high resolution touchscreens. However, there is nothing against using it with a classic mouse and keyboard interface.",
+            "title": "Touchscreen"
+        },
+        {
+            "location": "/HardwareRecommendations/#reference-units",
+            "text": "This section provides some examples of reference units, so that the interested readers can have a reference to begin with. Several combinations can be implemented, even multiple ones on the same unit. Some parameters should be taken into account when making the decision, such as:  * Pre-existing equipment: cameras, microphones, computers.\n* Recording scenario: lectures, conferences, studio, video-conference.\n* Complementary Hardware: scalers, splitters, audio mixers ...\n* Cost.\n* Publication channels.",
+            "title": "Reference units"
+        },
+        {
+            "location": "/HardwareRecommendations/#entry-level-unit-hd-webcam-based",
+            "text": "Component  Device  Format  Observations      Base unit  Intel i3 processor 4 GB RAM      Camera  Logitech c920  720p or 1080p     VGA capture card  Datapath VisionRBG 1es  24bit 1920x1080 x 32bit at 60Hz  Accepts DVI single link and VGA",
+            "title": "Entry level unit - HD webcam based"
+        },
+        {
+            "location": "/HardwareRecommendations/#sd-camera-and-dvi-framegrabber",
+            "text": "Component  Device  Format  Observations      Base unit  Intel i3 processor 4 GB RAM      Video capture card  Blackmagic Intensity Pro  720p, 1080p, 1080i  Sound embedded or analog    DVI capture card  Datapath VisionRBG 1es  24bit 1920x1080 x 32bit at 60Hz  Accepts DVI single link and VGA",
+            "title": "SD camera and DVI framegrabber"
+        },
+        {
+            "location": "/HardwareRecommendations/#hd-configuration-unit",
+            "text": "Component  Device  Format  Observations      Base unit  Intel i7 processor 4GB RAM      Video capture card  Blackmagic Decklink SDI Blackmagic Intensity Pro  720p, 1080p, 1080i  Sound embedded or analog    DVI capture card  Datapath VisionRBG 1es  24bit 1920x1080 x 32bit at 60Hz      NOTE: Audio can be captured from outside the video capture cards. Multiple audio sources can be recorded at once, but additional processing may be needed afterwards for a proper playback.",
+            "title": "HD configuration unit"
         }
     ]
 }
