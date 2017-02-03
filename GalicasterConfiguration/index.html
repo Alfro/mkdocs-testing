@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Galicaster Configuration - Galicaster Community - Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../site/css/base.css" rel="stylesheet">
+  <link href="../site/css/bootstrap-custom.min.css" rel="stylesheet">
+  <link href="../site/css/font-awesome-4.0.3.css" rel="stylesheet">
+  <link href="../site/css/highlight.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Galicaster Configuration";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+  <script src="../site/js/base.js"></script>
+  <script src="../site/js/bootstrap-3.0.3.min.js"></script>
+  <script src="../site/js/highlight.pack.js"></script>
+  <script src="../site/js/jquery-1.10.2.min.js"></script>
+  <script src="../site/mkdocs/js/lunr-0.5.7.min.js"></script>
+  <script src="../site/mkdocs/js/mustache.min.js"></script>
+  <script src="../site/mkdocs/js/require.js"></script>
+  <script src="../site/mkdocs/js/search.js"></script>
+  <script src="../site/mkdocs/js/text.js"></script>
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../HardwareRecommendations/" class="icon icon-home"> Galicaster Community - Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../HardwareRecommendations/">Hardware Recommendations</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../SoftwareInstallation/">Software Installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Galicaster Configuration</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#galicaster-configuration">Galicaster configuration</a></li>
+                
+                    <li><a class="toctree-l4" href="#general-configuration">General configuration</a></li>
+                
+                    <li><a class="toctree-l4" href="#main-parameters">Main parameters</a></li>
+                
+                    <li><a class="toctree-l4" href="#logger">Logger</a></li>
+                
+                    <li><a class="toctree-l4" href="#opencast-server-configuration">Opencast server configuration</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../UserGuide/">User Guide</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../HardwareRecommendations/">Galicaster Community - Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../HardwareRecommendations/">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Galicaster Configuration</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="galicaster-configuration">Galicaster configuration</h1>
+<p><em>This page is updated to the 2.0.0 release</em></p>
+<p>Configuring Galicaster involves:</p>
+<ul>
+<li>The <a href="#general-configuration">general configuration</a> of the application - including the <a href="#opencast-server-configuration">Opencast server configuration</a>;</li>
+<li>The setup of different device combinations, known as <a href="GalicasterConfiguration/InputProfiles.md">Input Profiles</a>;</li>
+<li>The activation of certain <a href="GalicasterConfiguration/Plugins.md">Plugins</a>.</li>
+</ul>
+<p>Due to their their extension and importance, Profiles and Plugins are further explained on their own spaces.</p>
+<h3 id="general-configuration">General configuration</h3>
+<p>The general configuration file is <code>conf.ini</code>, located by default at the directory <code>/etc/galicaster/</code> of your system. This file includes several sections regarding:</p>
+<ul>
+<li><a href="#main-parameters">Main parameters</a>, including designated work folders</li>
+<li><a href="#logger">Logger</a></li>
+<li><a href="#opencast-server-configuration">Opencast server configuration</a></li>
+<li><a href="#heartbeat-configuration">Heartbeat configuration</a>: frequency of communication signals</li>
+<li><a href="#series-configuration">Series configuration</a></li>
+<li><a href="GalicasterConfiguration/Plugins.md">Plugins configuration</a></li>
+</ul>
+<blockquote>
+<p><code>conf-dist.ini</code><br />
+The file <code>conf-dist.ini</code>, located at the installation folder of Galicaster, contains the factory configuration of Galicaster. You can check the default parameters there. This file is meant to remain unchanged.</p>
+</blockquote>
+<h2 id="main-parameters">Main parameters</h2>
+<p>Parameters are set in different sections at the <code>conf.ini file</code>. Parameters include folder designation, UI configuration, processing options, etc.</p>
+<p>In the <code>basic</code> section of the <code>conf.ini</code> file, you can configure the following items:</p>
+<ul>
+<li><a href="#administration-mode">Administration mode</a></li>
+<li><a href="#active-profile">Active profile</a> - configurable through the interface</li>
+<li><a href="#stop-dialog">Stop dialog</a></li>
+<li><a href="#quit">Quit option</a></li>
+<li><a href="#shutdown">Shutdown option</a></li>
+<li><a href="#resolution">Resolution</a></li>
+</ul>
+<h4 id="administration-mode">Administration mode</h4>
+<p>The <em>admin mode</em> allows the user to access the Profile Selector and the Media manager. If the <em>admin mode</em> is disabled, only the Recorder area is available and the selected profile is locked.</p>
+<pre><code class="ini">[basic]
+admin = True|False
+</code></pre>
+
+<p>Default value: <code>True</code></p>
+<h4 id="active-profile">Active profile</h4>
+<p>The active profile is saved in the <code>conf.ini</code> file. Use the Profile Selector in the graphical interface to change it.</p>
+<pre><code class="ini">[basic]
+profile = Default
+</code></pre>
+
+<p>Default value: <code>Default</code></p>
+<h4 id="stop-dialog">Stop dialog</h4>
+<p>If set, an "are you sure" pop-up will show when the stop button is clicked during a recording. If unset, the recording will stop immediatly.
+Disabling this option is specially useful in consecutive recordings, where the time between pieces is minimum.</p>
+<pre><code class="ini">[basic]
+stopdialog = True|False
+</code></pre>
+
+<p>Default value: <code>False</code></p>
+<h4 id="quit">Quit</h4>
+<p>If set, a "Quit" button will be displayed in the Welcome screen of Galicaster. The quit button will close Galicaster.
+If shortcuts are activated, the program can be closed with ctrl+shift+q</p>
+<pre><code class="ini">[basic]
+quit = True|False
+</code></pre>
+
+<p>Default value: <code>True</code></p>
+<h4 id="shutdown">Shutdown</h4>
+<p>If set, a "Shutdown" button will be displayed in the Welcome screen of Galicaster. The shutdown button will close Galicaster and shutdown the system.</p>
+<pre><code class="ini">[basic]
+shutdown = True|False
+</code></pre>
+
+<p>Default value: <code>False</code></p>
+<h4 id="resolution">Resolution</h4>
+<p>The application window resolution can be defined manually. Recommended resolutions are 1080p, 1024x768 and 1280x1024. Other resolutions are also possible. "auto" will adapt the resolution to the maximum available in fullscreen mode.</p>
+<pre><code class="ini">[basic]
+resolution = auto|1920x1080|1024x768|...
+</code></pre>
+
+<p>Default value: <code>auto</code></p>
+<blockquote>
+<p>￼Dual screens may require a manual resolution to be defined.</p>
+</blockquote>
+<h4 id="swap-videos">Swap videos</h4>
+<p>If set, a button will be displayed in the Recorder view in order to be able to swap the preview videos. For instance, if the camera is been displayed in the right side, pressing this button will be shown in the left side and the screen preview will be shown in the other side.</p>
+<pre><code class="ini">[basic]
+swapvideos = True|False
+</code></pre>
+
+<p>Default value: <code>True</code></p>
+<h4 id="side-by-side-layout">Side-by-side layout</h4>
+<p>Three types of layout are provide: Side-by-side and Picture-in-picture with screen or camera as main picture. In future releases the layout will be more customizable.</p>
+<pre><code class="ini">[sidebyside]
+layout = sbs
+</code></pre>
+
+<p>Layout options: (<strong>sbs</strong>|pip-screen|pip-camera)</p>
+<h4 id="homepage">Homepage</h4>
+<p>If you are in admin mode, Galicaster can load at startup the recorder or the media manager page.</p>
+<pre><code class="ini">[basic]
+homepage = DIS|REC|MMA
+</code></pre>
+
+<p>Default value: <code>DIS</code></p>
+<hr />
+<h3 id="conflicts-between-manual-and-scheduled-recordings">Conflicts between manual and scheduled recordings</h3>
+<p>Different conflict resolution for manual versus scheduled recordings.</p>
+<ul>
+<li>manual: If active, the user can start manual recordings</li>
+<li>stop: If active and manual unactive, a recording can be stopped.</li>
+<li>start: If activa and manual unactive, a recording can be started.</li>
+<li>pause: whether any recording can be paused.</li>
+<li>overlap : wheter a manual recording can or cannot cancel a scheduled recording.</li>
+</ul>
+<pre><code class="ini">[allows]
+manual = True
+start = False
+stop = False
+pause = True
+</code></pre>
+
+<h3 id="media-manager-appearance">Media Manager appearance</h3>
+<p>The Media Manager appearance, more specificaly the color of the row, depends on the Mediapackage status, can be customized. If the classic color is selected, row color depends on the Ingest operation status, otherwise, each operation cell wil acdquire a different color depending on its status.</p>
+<pre><code class="ini">[color]
+classic = false
+none =  #FFF0AA ;yellow
+nightly = #AEFFAE ; light green
+pending = #AEFFAE ; light green
+processing = #FFAE00 ; orange
+done = #88FF88 ; green
+failed = #FFAEAE ;red
+</code></pre>
+
+<h3 id="folder-designation">Folder designation</h3>
+<h4 id="repository-folder">Repository folder</h4>
+<p>The main folder and the name format of the subfolders can be modified.</p>
+<pre><code class="ini">[basic]
+repository = /path/to/folder/repository/
+
+[repository]
+foldertemplate = gc_{hostname}_{year}-{month}-{day}T{hour}h{minute}m{second}
+</code></pre>
+
+<p>Default value: <code>/home/$user/Repository</code><br />
+Template format: Free text; the following substitutions (in curly braces) are available: year, month, day, hour, minute, second and hostname.</p>
+<blockquote>
+<p><strong>Repository privileges</strong><br />
+The default user must have privileges for accessing and writing on this folder, otherwise you can execute a command like this: <code>sudo chown -R $user /path/to/folder/repository/</code></p>
+</blockquote>
+<h4 id="export-folder">Export Folder</h4>
+<p>The default user must have privileges for accessing and writing this folder.</p>
+<pre><code class="ini">[basic]
+export = /path/to/folder/export/
+</code></pre>
+
+<p>Default value: <code>/home/$user/_1</code></p>
+<h4 id="temporary-folder">Temporary folder</h4>
+<p>The default user must have privileges for accessing and writing on this folder.</p>
+<pre><code class="ini">[basic]
+tmp = /path/folder/repository/
+</code></pre>
+
+<p>Default value: <code>/tmp</code> (in Ubuntu distros)</p>
+<h3 id="recorder">Recorder</h3>
+<p>Allow to modify the behaviour of the recorder:
+<em> autorecover: If active the recorder reloads automatically after an error in the profile.
+</em> pausetype: Select if pause the pipeline or only pause the recording.</p>
+<pre><code class="ini">[recorder]
+autorecover = False
+pausetype = recording
+</code></pre>
+
+<p>autorecover: (True | <strong>False</strong>)<br />
+pausetype: (recording | <strong>pipeline</strong>)</p>
+<h3 id="help">Help</h3>
+<p>Set the default help message in Galicaster when the help button is pressed in the recorder. The button it's only visible when <code>admin = False</code></p>
+<pre><code class="ini">[help]
+main = Visit galicaster.teltek.esmain = Visit galicaster.teltek.es
+text = ...or contact us on our community list.
+</code></pre>
+
+<h2 id="logger">Logger</h2>
+<p>By default, the log information is stored at the temporary folder, in a single file named galicaster.log, so the file is deleted on every reboot. However, the syslog system may be used instead. The log level and destination folder can be also configured.</p>
+<pre><code class="ini">[logger]
+path = /tmp/galicaster.log
+level = DEBUG
+use_syslog = False
+rotate = False
+</code></pre>
+
+<p>level: (INFO|WARNING|<strong>DEBUG</strong>)<br />
+use_syslog: (True|<strong>False</strong>)<br />
+rotate: (True|<strong>False</strong>)</p>
+<h2 id="opencast-server-configuration">Opencast server configuration</h2>
+<p>Galicaster can connect to an Opencast core, but certain requirements have to be met:</p>
+<ul>
+<li>A digest user account and password have to be provided. A regular user will not work</li>
+<li>The server has to be reachable by the Galicaster agent. This usually means that both machines have to be in the same network.</li>
+<li>If the Opencast version is previous to 1.4, the legacy mode has to be activated.</li>
+</ul>
+<h4 id="scheduled-recordings">Scheduled recordings</h4>
+<p>Scheduled recordings are taken from the Opencast core scheduling system. Any scheduled recording has metadata associated with it and its series. Galicaster will fetch all metadata and allow the user to modify some of them.
+Scheduled recordings can be ingested immediately or nightly - the nocturnal ingest time is defined in the heartbeat section - or reingested manually anytime through the media manager.</p>
+<pre><code class="ini">[ingest]
+scheduled = none|immediately|nightly
+</code></pre>
+
+<h4 id="manual-recordings">Manual recordings</h4>
+<p>Galicaster can set up the default values for some parameters in Manual recordings:</p>
+<ul>
+<li>Workflow</li>
+<li>Workflow parameters</li>
+<li>Ingest schedule</li>
+</ul>
+<pre><code class="ini">[ingest]
+manual = none|immediately|nightly
+</code></pre>
+
+<h4 id="galicaster-agent-hostname">Galicaster agent hostname</h4>
+<p>A Galicaster agent registers with a name based on the machine hostname ( <code>gc-$hostname-[mobile]</code> ). A customized name can be set up to be used as hostname on the Opencast agent handler.</p>
+<h3 id="parameters">Parameters</h3>
+<p>This is a summary of all the parameters related to the Opencast configuration in Galicaster (default values are displayed in <strong>bold</strong>):</p>
+<ul>
+<li><strong>active</strong>: Enables the connection to a Opencast server. (True|<strong>False</strong>)</li>
+<li><strong>manual</strong>: Configure when the manual recordings will be automatically ingested. (<strong>none</strong>|immediately|nightly)</li>
+<li><strong>none</strong>: disable automatic ingestion.</li>
+<li><strong>immediately</strong>: ingest immediately after the recording.</li>
+<li><strong>nightly</strong>: ingest the recordings of the day at night (nightly).</li>
+<li><strong>scheduled</strong>: Configure when the scheduled recordings will be automatically ingested. (<strong>none</strong>|immediately|nightly)</li>
+<li><strong>none</strong>: disable automatic ingestion.</li>
+<li><strong>immediately</strong>: ingest immediately after the recording</li>
+<li><strong>nightly</strong>: ingest the recordings of the day at night.</li>
+<li><strong>host</strong>: Opencast server URL (For example:  http://<opencast_server_ip_address>:<opencast_server_port>).</li>
+<li><strong>username</strong>: Name of the account used to operate the Opencast REST endpoints.</li>
+<li><strong>password</strong>: Password for the account used to operate the Opencast REST endpoints.</li>
+<li><strong>hostname</strong>: Name of the Galicaster unit. Defaults to the host name as defined in the OS, prepended by "GC-" if it is a Galicaster Class or "GCMobile-" if it is a Galicaster Mobile.</li>
+<li><strong>workflow</strong>: name of the workflow used to ingest the recordings.</li>
+<li><strong>workflow-parameters</strong>: list of name-value pairs (name:value) to be passed to the Opencast workflow. The items in the list are separated by semicolons (";").</li>
+<li>If you specify trimHold:true you will also need videoPreview:true for the default workflow.</li>
+<li><strong>legacy</strong>: Whether to use 1.2 &amp; 1.3 Opencast compatibility mode. (True|<strong>False</strong>)</li>
+<li><strong>visible_tracks</strong>: Whether or not the tracks in Galicaster are visible.(True|<strong>False</strong>)</li>
+<li>If active, the available tracks are reported to Opencast, so that the user can choose which ones will be recorded.</li>
+<li>If not, Galicaster will record all the tracks in the profile active at the moment the scheduled recording starts.<ul>
+<li>If this option is active, and the track names in the configuration file are changed for some reason, the previously scheduled recordings may fail because the track names in such recordings will not much the current track names. Therefore, all the existing recordings should be scheduled again if such a change is made.<blockquote>
+<p><strong>Changes in track names</strong><br />
+If this option is <strong><em>enabled</em></strong>, and track names are changed at the configuration file for some reason, the recordings already scheduled in Opencast may fail because the track names in the schedule will not match the current ones. Therefore, if the track names are modified, all the existing recordings should be scheduled again so that they include the new track names.
+When this option is <strong><em>disabled</em></strong>, Galicaster sends no information about the tracks defined in its profile, and therefore no special precautions should be taken when the track names need to be modified for some reason.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><strong>multiple-ingest</strong>: (new in Galicaster 1.3.1): Whether ingestion is made through the admin server or through the less loaded available ingest server. When the option is active, Galicaster looks for the less loaded active sever (not in mantenaince nor offline), always avoiding the admin server. True | <strong>False</strong> (default value) .</li>
+<li><strong>address</strong>: IP to connect with Opencast.</li>
+<li><strong>connect_timeout</strong>: Connection timeout for curl in seconds. Default: 30</li>
+<li><strong>timeout</strong>: Total timeout for curl in seconds. Default: 30</li>
+<li><strong>ca_parameters</strong>: Extra parameters to be passed to opencast (More info: https://opencast.jira.com/wiki/display/MH/Configuration+Keys)</li>
+<li><strong>ignore_capture_devices</strong>: Whether to record all tracks regardless of capture.device.names (True | <strong>False</strong>)
+￼</li>
+</ul>
+<h4 id="example">Example:</h4>
+<pre><code class="ini">[ingest]
+active = True
+legacy = False
+visible_tracks = False
+manual =  nightly
+scheduled = immediately
+host = http://fakeadmin.matterhorn.com:80
+username = matterhorn_system_account
+password = CHANGE_ME
+workflow = full
+workflow-parameters = videoPreview:true;trimHold:true;captionHold:false;archiveOp:true
+multiple-ingest = False
+address = 127.0.0.1
+</code></pre>
+
+<h3 id="heartbeat-configuration">Heartbeat configuration</h3>
+<p>The heartbeat module handles the frequency by which the Opencast communication module in Galicaster send messages to the designated Opencast server.</p>
+<p>There are three periodic signals: short period, long period and 24-hour period (night)_</p>
+<ul>
+<li><strong>short period</strong>: send capture agent status messages.</li>
+<li>Value in seconds. Default: 10 seconds</li>
+<li><strong>long period</strong>: check schedule updates.<ul>
+<li>Value in seconds. Default: 60 seconds</li>
+</ul>
+</li>
+<li>24-hour period or <strong>night period</strong>: start nightly ingestions.</li>
+<li>Value in hh:mm format. Default 00:00</li>
+</ul>
+<h4 id="default-configuration-example">Default configuration example:</h4>
+<pre><code class="ini">[heartbeat]
+short = 10
+long = 60
+night = 00:00
+</code></pre>
+
+<h3 id="series-configuration">Series configuration</h3>
+<p>This section sets allows filtering series shown in the drop down list of the metadata editor. It accepts most of the filter values that Opencast endpoint accepts, namely: seriesId, seriesTitle, creator, contributor, publisher, rightsholder, createdfrom, createdto, language, license, subject, abstract, description.</p>
+<blockquote>
+<p>According to Opencast documentation, the date-like filters (createdfrom and createdto) must follow the format yyyy-MM-dd'T'HH:mm:ss'Z'</p>
+</blockquote>
+<p>In addition to the previous filters, the 'default' keyword accepts a series ID that will appear in the series list, no matter what. The values to the parameters may include placeholders for certain environment variables. The only one supported currently is '{user}', that is substituted with the current user name.</p>
+<pre><code class="ini">[series]
+default = XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+contributor = {user}
+... etc
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../UserGuide/" class="btn btn-neutral float-right" title="User Guide"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../SoftwareInstallation/" class="btn btn-neutral" title="Software Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../SoftwareInstallation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../UserGuide/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
